@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-x = "Programming"
-print(f'"{x} is like building a multilingual puzzle')
+x = '"Programming is like building a multilingual puzzle'
+print(x)
