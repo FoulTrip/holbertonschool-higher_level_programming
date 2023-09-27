@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for char in range(97, 123):
-    if chr(char) != 'e' and chr(char) != 'q':
-        print("{}".format(chr(char)), end="")
+    if char != 101 and char != 113:
+        print("{:c}".format(char), end="")
