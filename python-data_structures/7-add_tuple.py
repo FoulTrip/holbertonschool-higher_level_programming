@@ -11,3 +11,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     new_tuple = (fValue, sValue)
     return new_tuple
+
+
+tiple_a = (1, 4, 7, 4, 3)
+tiple_b = (5, 2, 9, 0, 3)
+print(add_tuple(tiple_a, tiple_b))
