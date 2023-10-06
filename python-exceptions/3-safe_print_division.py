@@ -8,9 +8,9 @@ def safe_print_division(a, b):
     finally:
         if result is not None:
             if isinstance(result, int):
-                print("Inside result: {:f}".format(result))
+                print("Inside result: {:d}".format(result))
             else:
-                print("Inside result: {:f}".format(int(result)))
+                print("Inside result: {:d}".format(int(result)))
         else:
-            print("Inside result: {:f}".format(result))
+            print("Inside result: {:d}".format(result))
         return result
