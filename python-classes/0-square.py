@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 """Square Class
-This module defines a simple Square class.
+
+This class don't do anything for the moment
+
 """
+
 
 class Square:
     pass
