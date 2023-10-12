@@ -75,7 +75,7 @@ class Square:
 
     def my_print(self):
         """
-        Prints the square to stdout with '#' characters, 
+        Prints the square to stdout with '#' characters,
         respecting the position attribute.
 
         If size is equal to 0, print an empty line.
