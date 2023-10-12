@@ -4,9 +4,10 @@
     Printing a square
 """
 
+
 class Square:
     """
-        This class defines a square.
+    This class defines a square.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -74,7 +75,8 @@ class Square:
 
     def my_print(self):
         """
-        Prints the square to stdout with '#' characters, respecting the position attribute.
+        Prints the square to stdout with '#' characters, 
+        respecting the position attribute.
 
         If size is equal to 0, print an empty line.
         Position is used to set the left margin of the square.
