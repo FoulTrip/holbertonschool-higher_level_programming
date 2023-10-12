@@ -1,16 +1,25 @@
 #!/usr/bin/python3
 
-"""Printing a square """
+"""
+Printing a square
+"""
 
 
 class Square:
     def __init__(self, size=0):
+        """
+        Initializes a Square instance.
+
+        Args:
+            size (int, optional): The size of the square. Defaults to 0.
+        """
         self.__size = size
 
     @property
     def size(self):
         """
         Getter method for the size attribute.
+
         Returns:
             int: The size of the square.
         """
@@ -20,8 +29,10 @@ class Square:
     def size(self, value):
         """
         Setter method for the size attribute.
+
         Args:
             value (int): The size to set.
+
         Raises:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0.
@@ -35,6 +46,7 @@ class Square:
     def area(self):
         """
         Calculates the area of the square.
+
         Returns:
             int: The area of the square.
         """
