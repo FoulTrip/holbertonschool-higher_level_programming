@@ -15,7 +15,7 @@ ese valor es equivalente a usar el operador ``+``.
 
 ::
 
-    >>> add_integer = __import__('nombre_de_tu_archivo').add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(2, 3)
     5
 
