@@ -1,47 +1,123 @@
 ===========================
-How to Use 0-add_integer.py
+Cómo utilizar 0-add_integer.py
 ===========================
 
-Description
+Descripción
 ===========
 
-This module defines an integer addition function ``add_integer(a, b=98)``.
+Este módulo define una función de suma de enteros ``add_integer(a, b=98)``.
 
-Usage
+Uso
 =====
 
-``add_integer(...)``` returns the addition of its two arguments. For numbers,
-that value is equivalent to using the ``+`` operator.
+``add_integer(...)``` devuelve la suma de sus dos argumentos. Para números,
+ese valor es equivalente a usar el operador ``+``.
 
 ::
 
-    >>> add_integer = __import__('your_file_name').add_integer
-    >>> add_integer(1, 2)
-    3
+    >>> add_integer = __import__('nombre_de_tu_archivo').add_integer
+    >>> add_integer(2, 3)
+    5
 
 ::
 
-    >>> add_integer(1, -2)
+    >>> add_integer(2, -3)
     -1
 
-::
-
-    >>> add_integer(1.4, 2)
-    3
+La función también funciona con valores de punto flotante.
 
 ::
 
-    >>> add_integer(1, "2")
+    >>> add_integer(2.0, 3.0)
+    5
+
+Tenga en cuenta que los flotantes se convierten a enteros antes de que se realice la adición.
+
+::
+
+    >>> add_integer(2.9, 0.2)
+    2
+
+::
+
+    >>> add_integer(-2.9, -0.2)
+    -2
+
+Los valores de punto flotante y no de punto flotante se pueden combinar.
+
+::
+
+    >>> add_integer(2.3, -3)
+    -1
+
+El segundo argumento es opcional; de forma predeterminada, es 98.
+
+::
+
+    >>> add_integer(2)
+    100
+
+No números
+===========
+
+``add_integer()`` espera que ambos argumentos sean enteros o flotantes. Si alguno de los argumentos es un no entero y no flotante, se genera un TypeError:
+
+::
+
+    >>> add_integer("hello", 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+
+    >>> add_integer(2, "hello")
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-Regular tests passed
+::
 
-Handled Edge Cases:
-- The function correctly raises a TypeError when a non-integer or non-float is provided as the first argument.
-- The function correctly raises a TypeError when a non-integer or non-float is provided as the second argument.
-- The function correctly handles the case when None is provided as the first argument.
-- The function correctly handles the case when None is provided as the second argument.
-- The function correctly handles the case when both arguments are non-integer and non-float, raising a TypeError only for the first argument.
-- The function correctly handles the case when float('inf') is provided, raising an OverflowError.
-- The function correctly handles the case when float('nan') is provided, raising a ValueError.
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+
+    >>> add_integer(2.3, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+Si ambos argumentos no son enteros y no flotantes, se imprime un mensaje de TypeError solo para el primer argumento.
+
+::
+
+    >>> add_integer("hello", "there")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+La función fallará si se proporciona infinito.
+
+::
+
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+::
+
+    >>> add_integer(2, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+Y nuevamente con números NaN.
+
+::
+
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+::
+
+    >>> add_integer(2, float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
