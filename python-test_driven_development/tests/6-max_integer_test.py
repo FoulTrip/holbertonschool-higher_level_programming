@@ -6,6 +6,8 @@ import unittest
     Max integer - Unittest
 """
 
+max_integer = __import__("6-max_integer").max_integer
+
 
 class TestMaxInteger(unittest.TestCase):
     """Unittests for the function max_integer()"""
@@ -26,11 +28,5 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 1, 1, 1]), 1)
 
 
-def max_integer(list=[]):
-    if not list:
-        return None
-    max_value = list[0]
-    for num in list:
-        if num > max_value:
-            max_value = num
-    return max_value
+if __name__ == "__main__":
+    unittest.main()
