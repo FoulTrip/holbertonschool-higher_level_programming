@@ -16,6 +16,6 @@ def text_indentation(text):
         new_text += char
 
         if char in special_chars:
-            new_text += "\n"
+            new_text += "\n\n"
 
     print("".join(line.strip() for line in new_text.split("\n")))
