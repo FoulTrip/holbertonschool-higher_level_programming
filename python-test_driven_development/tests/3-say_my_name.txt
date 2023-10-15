@@ -6,10 +6,10 @@ This is a test
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 >>> say_my_name("David", "Vasquez")
-My name is John Doe
+My name is David Vasquez
 
 >>> say_my_name("anna")
-My name is Alice 
+My name is anna 
 
 >>> say_my_name(123, "Mahecha")
 Traceback (most recent call last):
