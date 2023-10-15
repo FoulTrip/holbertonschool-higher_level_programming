@@ -15,18 +15,18 @@ def matrix_divided(matrix, div):
     new_list = []
     if not matrix:
         raise TypeError(list_error)
-    if type(div) is not int and type(div) is not float:
+    if type(div) not in (int, float):
         raise TypeError(div_int_error)
-    if div is 0:
+    if div == 0:
         raise ZeroDivisionError(div_zero_error)
     longitud = len(matrix[0])
     for lista in matrix:
-        if type(lista) is not list:
+        if not isinstance(lista, list):
             raise TypeError(list_error)
         if len(lista) != longitud:
             raise TypeError(len_error)
         for item in lista:
-            if type(item) is not int and type(item) is not float:
+            if not isinstance(item, (int, float)):
                 raise TypeError(list_error)
             num = item / div
             new_list.append(round(num, 2))
