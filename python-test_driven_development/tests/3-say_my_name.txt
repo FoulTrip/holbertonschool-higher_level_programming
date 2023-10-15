@@ -15,14 +15,6 @@ My name is anna
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
-say_my_name(["David"], "Mahecha")
-Traceback (most recent call last):
-TypeError: first_name must be a string
-
 >>> say_my_name("David", 123)
-Traceback (most recent call last):
-TypeError: last_name must be a string
-
-say_my_name("Mahecha", ["David"])
 Traceback (most recent call last):
 TypeError: last_name must be a string
