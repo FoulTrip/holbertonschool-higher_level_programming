@@ -18,4 +18,4 @@ def text_indentation(text):
         if char in special_chars:
             new_text += "\n"
 
-    print("\n".join(line.strip() for line in new_text.split("\n")))
+    print("\n".join(line.strip() for line in new_text.split("")))
