@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""This is an class Rectangle that defines a rectangle"""
+""" Area and Perimeter"""
 
 
 class Rectangle:
-    """This class actualy pass"""
+    """defines a rectangle"""
 
     number_of_instances = 0
     print_symbol = "#"
