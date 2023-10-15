@@ -25,4 +25,4 @@ TypeError: last_name must be a string
 
 say_my_name("Mahecha", ["David"])
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: last_name must be a string
