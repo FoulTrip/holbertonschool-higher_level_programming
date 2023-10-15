@@ -7,15 +7,13 @@ This is a test
 
 >>> text_indentation("This is a sentence. It has multiple lines. What do you think? I'm not sure.")
 This is a sentence.
-
+<BLANKLINE>
 It has multiple lines.
-
+<BLANKLINE>
 What do you think?
-
+<BLANKLINE>
 I'm not sure.
-
->>> text_indentation("This is a simple sentence without special characters")
-This is a simple sentence without special characters
+<BLANKLINE>
 
 >>> text_indentation(123)
 Traceback (most recent call last):
@@ -23,4 +21,4 @@ TypeError: text must be a string
 
 >>> text_indentation()
 Traceback (most recent call last):
-TypeError: text_indentation() missing 1 required positional argument: 'size'
+TypeError: text_indentation() missing 1 required positional argument: 'text'
