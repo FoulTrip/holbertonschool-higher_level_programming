@@ -33,8 +33,3 @@ def matrix_divided(matrix, div):
         new_matrix.append(new_list)
         new_list = []
     return new_matrix
-
-
-matrix = [[1.5, 2.5, 3.5], [4.5, 5.5, 6.5]]
-div = 0.5
-print(matrix_divided(matrix, div))
