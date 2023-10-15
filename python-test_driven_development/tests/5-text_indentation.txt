@@ -1,0 +1,26 @@
+===========================
+Using ``text_indentation``
+===========================
+
+This is a test
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("This is a sentence. It has multiple lines. What do you think? I'm not sure.")
+This is a sentence.
+
+It has multiple lines.
+
+What do you think?
+
+I'm not sure.
+
+>>> text_indentation("This is a simple sentence without special characters")
+This is a simple sentence without special characters
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'size'
