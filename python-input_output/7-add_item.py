@@ -14,15 +14,13 @@ def save_to_json_file(my_obj, filename):
     with open(filename, "w") as f:
         json.dump(my_obj, f)
 
-
 def load_from_json_file(filename):
     """creates an Object from a “JSON file”"""
     with open(filename) as f:
         return json.load(f)
 
-
 def add_items(arguments):
-    # Compruebo si el archivo 'add_item.json' ya existe y cargo su contenido en caso de que si
+    # Compruebo si el archivo 'add_item.json' ya existe
     if os.path.exists("add_item.json"):
         my_list = load_from_json_file("add_item.json")
     else:
