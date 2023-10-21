@@ -14,10 +14,12 @@ def save_to_json_file(my_obj, filename):
     with open(filename, "w") as f:
         json.dump(my_obj, f)
 
+
 def load_from_json_file(filename):
     """creates an Object from a “JSON file”"""
     with open(filename) as f:
         return json.load(f)
+
 
 def add_items(arguments):
     # Compruebo si el archivo 'add_item.json' ya existe
@@ -32,7 +34,8 @@ def add_items(arguments):
     # Guardo la lista actualizada en 'add_item.json'
     save_to_json_file(my_list, "add_item.json")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     # Get command-line arguments excluding the script name
     arguments = sys.argv[1:]
     add_items(arguments)
