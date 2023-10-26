@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-Clase Square que hereda de la clase Rectangle y representa un cuadrado.
+Clase Square que hereda de la clase Rectangle 
+y representa un cuadrado.
 """
 
 from models.rectangle import Rectangle
@@ -13,7 +14,8 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """
         Constructor de la clase Square.
-        Llama al constructor de la clase base (Rectangle) y asigna el tamaño a ancho y alto.
+        Llama al constructor de la clase base (Rectangle)
+        y asigna el tamaño a ancho y alto.
         """
         super().__init__(size, size, x, y, id)
 
@@ -43,7 +45,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-        Método para actualizar los atributos del cuadrado a través de argumentos o palabras clave.
+        Método para actualizar los atributos del cuadrado
+        a través de argumentos o palabras clave.
         """
         argc = len(args)
         kwargc = len(kwargs)
