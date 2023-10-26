@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Clase Rectangle que hereda de la clase Base 
+Clase Rectangle que hereda de la clase Base
 y representa un rectángulo.
 """
 
@@ -79,7 +79,8 @@ class Rectangle(Base):
 
     def check_parameter(self, value, param):
         """
-        Verifica si un parámetro es un entero y cumple con las restricciones especificadas.
+        Verifica si un parámetro es un entero y cumple
+        con las restricciones especificadas.
 
         Parameters:
         - value: Valor que se debe verificar.
@@ -89,12 +90,9 @@ class Rectangle(Base):
         - TypeError: Se genera si el valor no es un entero.
         - ValueError: Se genera si el valor no cumple con las restricciones
 
-        Este método se utiliza para garantizar que los parámetros pasados al
-        constructor de la clase Rectangle sean válidos. Comprueba si el valor
-        es un entero y si cumple con las restricciones especificadas para el
-        parámetro, como ser mayor que 0 en el caso de 'width' y 'height',
-        o mayor o igual que 0 en el caso de 'x' y 'y'. Si el valor no cumple
-        con estas restricciones, se generan excepciones para indicar el tipo de error.
+        Este método se utiliza para garantizar que los
+        parámetros pasados al constructor de la clase
+        Rectangle sean válidos.
 
         """
         if type(value) is not int:
@@ -135,13 +133,9 @@ class Rectangle(Base):
         Devuelve una representación en cadena del rectángulo.
 
         Return:
-        - str: Una cadena que representa el rectángulo en el formato "[Rectangle] (id) x/y - width/height".
+        - str: Una cadena que representa el rectángulo 
 
-        Esta función genera una representación en cadena del rectángulo,
-        que incluye su tipo ("[Rectangle]"), su identificador (id),
-        su posición en X e Y (x/y) y sus dimensiones de ancho y alto (width/height).
-        La representación en cadena es útil para imprimir información
-        legible sobre el rectángulo.
+        Esta función genera una representación en cadena del rectángulo
 
         """
 
@@ -152,10 +146,13 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """
 
-        Actualiza los atributos del rectángulo utilizando argumentos posicionales o palabras clave.
+        Actualiza los atributos del rectángulo utilizando argumentos 
+        posicionales o palabras clave.
 
         Parameters:
-        - args: Argumentos posicionales que permiten actualizar los atributos en un orden específico (id, width, height, x, y).
+        - args: Argumentos posicionales que permiten actualizar 
+                los atributos en un orden específico 
+                (id, width, height, x, y).
         - kwargs: Palabras clave que permiten actualizar atributos específicos.
 
         Esta función permite actualizar los atributos del rectángulo,
