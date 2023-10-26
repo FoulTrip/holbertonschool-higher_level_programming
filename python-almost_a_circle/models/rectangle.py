@@ -133,7 +133,7 @@ class Rectangle(Base):
         Devuelve una representación en cadena del rectángulo.
 
         Return:
-        - str: Una cadena que representa el rectángulo 
+        - str: Una cadena que representa el rectángulo
 
         Esta función genera una representación en cadena del rectángulo
 
@@ -146,21 +146,21 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """
 
-        Actualiza los atributos del rectángulo utilizando argumentos 
+        Actualiza los atributos del rectángulo utilizando argumentos
         posicionales o palabras clave.
 
         Parameters:
-        - args: Argumentos posicionales que permiten actualizar 
-                los atributos en un orden específico 
+        - args: Argumentos posicionales que permiten actualizar
+                los atributos en un orden específico
                 (id, width, height, x, y).
         - kwargs: Palabras clave que permiten actualizar atributos específicos.
 
         Esta función permite actualizar los atributos del rectángulo,
         utilizando argumentos posicionales o palabras clave.
         Si se proporcionan argumentos posicionales, se actualizan
-        en el orden: id, width, height, x, y. Si se proporcionan palabras clave,
-        se actualizan los atributos correspondientes si están presentes en las
-        palabras clave.
+        en el orden: id, width, height, x, y. Si se proporcionan palabras
+        clave, se actualizan los atributos correspondientes si están 
+        presentes en las palabras clave.
 
         """
         argc = len(args)
