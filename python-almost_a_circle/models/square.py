@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Clase Square que hereda de la clase Rectangle 
+Clase Square que hereda de la clase Rectangle
 y representa un cuadrado.
 """
 
