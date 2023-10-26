@@ -19,7 +19,7 @@ class Rectangle(Base):
         """
         Constructor de la clase Rectangle.
 
-        Parámetros:
+        Parameters:
         - width (int): Ancho del rectángulo.
         - height (int): Alto del rectángulo.
         - x (int): Posición en el eje X.
@@ -41,88 +41,51 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    """
-    Propiedad para obtener el ancho del rectángulo.
-    """
-
     @property
     def width(self):
         return self.__width
-
-    """
-    Propiedad para establecer el ancho del rectángulo.
-    """
 
     @width.setter
     def width(self, param):
         self.check_parameter(param, "width")
         self.__width = param
 
-    """
-    Propiedad para obtener la altura del rectángulo.
-    """
-
     @property
     def height(self):
         return self.__height
-
-    """
-    Propiedad para establecer la altura del rectángulo.
-    """
 
     @height.setter
     def height(self, param):
         self.check_parameter(param, "height")
         self.__height = param
 
-    """
-    Propiedad para obtener la posición en X del rectángulo
-    """
-
     @property
     def x(self):
         return self.__x
-
-    """
-    Propiedad para establecer la posición en X del rectángulo.
-    """
 
     @x.setter
     def x(self, param):
         self.check_parameter(param, "x")
         self.__x = param
 
-    """
-    Propiedad para obtener la posición en Y del rectángulo.
-    """
-
     @property
     def y(self):
         return self.__y
-
-    """
-    Propiedad para establecer la posición en Y del rectángulo.
-    """
 
     @y.setter
     def y(self, param):
         self.check_parameter(param, "y")
         self.__y = param
 
-    """
-    Método para verificar si un parámetro es un entero y cumple 
-    con las restricciones.
-    """
-
     def check_parameter(self, value, param):
         """
         Verifica si un parámetro es un entero y cumple con las restricciones especificadas.
 
-        Parámetros:
+        Parameters:
         - value: Valor que se debe verificar.
         - param (str): Nombre del parámetro que se está verificando
 
-        Excepciones:
+        Exceptions:
         - TypeError: Se genera si el valor no es un entero.
         - ValueError: Se genera si el valor no cumple con las restricciones
 
@@ -141,18 +104,24 @@ class Rectangle(Base):
         if value < 0 and param in ("x", "y"):
             raise ValueError(param + " must be >= 0")
 
-    """
-    Método para calcular el área del rectángulo.
-    """
-
     def area(self):
+        """
+
+        Calcula y devuelve el área del rectángulo.
+
+        Return:
+        - int: El área del rectángulo
+
+        Esta función calcula el área del rectángulo
+        multiplicando su ancho por su alto y devuelve
+        el resultado como un número entero.
+
+        """
+
         return self.__width * self.__height
 
-    """
-    Método para mostrar el rectángulo en la consola.
-    """
-
     def display(self):
+        """Muestra una representación visual del rectángulo en la consola"""
         if self.__y > 0:
             print("\n" * self.__y, end="")
         for i in range(self.__height):
@@ -160,21 +129,43 @@ class Rectangle(Base):
                 print(" " * self.__x, end="")
             print("#" * self.__width)
 
-    """
-    Método para representar el rectángulo como una cadena de texto.
-    """
-
     def __str__(self):
+        """
+
+        Devuelve una representación en cadena del rectángulo.
+
+        Return:
+        - str: Una cadena que representa el rectángulo en el formato "[Rectangle] (id) x/y - width/height".
+
+        Esta función genera una representación en cadena del rectángulo,
+        que incluye su tipo ("[Rectangle]"), su identificador (id),
+        su posición en X e Y (x/y) y sus dimensiones de ancho y alto (width/height).
+        La representación en cadena es útil para imprimir información
+        legible sobre el rectángulo.
+
+        """
+
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id, self.__x, self.__y, self.__width, self.__height
         )
 
-    """
-    Método para actualizar los atributos del rectángulo a 
-    través de argumentos o palabras clave.
-    """
-
     def update(self, *args, **kwargs):
+        """
+
+        Actualiza los atributos del rectángulo utilizando argumentos posicionales o palabras clave.
+
+        Parameters:
+        - args: Argumentos posicionales que permiten actualizar los atributos en un orden específico (id, width, height, x, y).
+        - kwargs: Palabras clave que permiten actualizar atributos específicos.
+
+        Esta función permite actualizar los atributos del rectángulo,
+        utilizando argumentos posicionales o palabras clave.
+        Si se proporcionan argumentos posicionales, se actualizan
+        en el orden: id, width, height, x, y. Si se proporcionan palabras clave,
+        se actualizan los atributos correspondientes si están presentes en las
+        palabras clave.
+
+        """
         argc = len(args)
         kwargc = len(kwargs)
         modif_attrs = ["id", "width", "height", "x", "y"]
@@ -188,11 +179,8 @@ class Rectangle(Base):
                 if k in modif_attrs:
                     setattr(self, k, v)
 
-    """
-    Método para convertir el rectángulo en un diccionario.
-    """
-
     def to_dictionary(self):
+        """Return a dict"""
         return {
             "id": self.id,
             "width": self.__width,
