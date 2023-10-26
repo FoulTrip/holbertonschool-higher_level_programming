@@ -19,10 +19,10 @@ class Base:
     __nb_objects = 0
 
     """
-    Constructor de la clase Base. 
-    Si no se proporciona un "id", 
-    incrementa el contador y asigna 
-    un valor único. Si se proporciona 
+    Constructor de la clase Base.
+    Si no se proporciona un "id",
+    incrementa el contador y asigna
+    un valor único. Si se proporciona
     un "id", lo asigna al objeto.
     """
 
