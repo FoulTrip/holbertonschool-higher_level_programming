@@ -115,6 +115,25 @@ class Rectangle(Base):
     """
 
     def check_parameter(self, value, param):
+        """
+        Verifica si un parámetro es un entero y cumple con las restricciones especificadas.
+
+        Parámetros:
+        - value: Valor que se debe verificar.
+        - param (str): Nombre del parámetro que se está verificando
+
+        Excepciones:
+        - TypeError: Se genera si el valor no es un entero.
+        - ValueError: Se genera si el valor no cumple con las restricciones
+
+        Este método se utiliza para garantizar que los parámetros pasados al
+        constructor de la clase Rectangle sean válidos. Comprueba si el valor
+        es un entero y si cumple con las restricciones especificadas para el
+        parámetro, como ser mayor que 0 en el caso de 'width' y 'height',
+        o mayor o igual que 0 en el caso de 'x' y 'y'. Si el valor no cumple
+        con estas restricciones, se generan excepciones para indicar el tipo de error.
+
+        """
         if type(value) is not int:
             raise TypeError(param + " must be an integer")
         if value <= 0 and param in ("width", "height"):
