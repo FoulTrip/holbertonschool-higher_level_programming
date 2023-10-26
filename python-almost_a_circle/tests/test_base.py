@@ -169,7 +169,7 @@ class TestBase(unittest.TestCase):
         Test the create method
         """
         with self.assertRaises(TypeError) as msg:
-            warn = Rectangle.create("Monty Python")
+            warn = Rectangle.create("Monty")
 
         self.assertEqual(
             "create() takes 1 positional argument but 2 were given", str(msg.exception)
