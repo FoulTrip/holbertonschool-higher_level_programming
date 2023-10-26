@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
 Clase Base que se utiliza para gestionar objetos con un identificador único.
