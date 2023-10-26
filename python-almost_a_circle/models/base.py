@@ -11,8 +11,8 @@ from os import path
 
 class Base:
     """
-    Atributo de clase para realizar 
-    un seguimiento del número de 
+    Atributo de clase para realizar
+    un seguimiento del número de
     objetos creados.
     """
 
@@ -36,8 +36,8 @@ class Base:
     @staticmethod
     def to_json_string(list_dictonaries):
         """
-        Convierte una lista de diccionarios 
-        en una cadena JSON. Si la lista es 
+        Convierte una lista de diccionarios
+        en una cadena JSON. Si la lista es
         nula o vacía, devuelve una cadena vacía.
         """
         if list_dictonaries is None or len(list_dictonaries) == 0:
@@ -47,8 +47,8 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """
-        Guarda una lista de objetos en 
-        un archivo JSON. El nombre del 
+        Guarda una lista de objetos en
+        un archivo JSON. El nombre del
         archivo se deriva del nombre de la clase.
         """
         filename = cls.__name__ + ".json"
@@ -66,7 +66,7 @@ class Base:
     def from_json_string(json_string):
         """
         Convierte una cadena JSON en una
-        lista de diccionarios.Si la cadena 
+        lista de diccionarios.Si la cadena
         es nula o vacía, devuelve una lista vacía.
         """
         if json_string is None or len(json_string) == 0:
@@ -93,7 +93,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """
-        Carga objetos desde un archivo JSON y 
+        Carga objetos desde un archivo JSON y
         los convierte en instancias de la clase.
         """
         filename = cls.__name__ + ".json"
