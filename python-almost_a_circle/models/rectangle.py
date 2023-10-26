@@ -159,7 +159,7 @@ class Rectangle(Base):
         utilizando argumentos posicionales o palabras clave.
         Si se proporcionan argumentos posicionales, se actualizan
         en el orden: id, width, height, x, y. Si se proporcionan palabras
-        clave, se actualizan los atributos correspondientes si están 
+        clave, se actualizan los atributos correspondientes si están
         presentes en las palabras clave.
 
         """
