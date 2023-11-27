@@ -1,3 +1,5 @@
+-- Lists all cities of CA in the database
+-- order: ascending
 SELECT
     `id`,
     `name`

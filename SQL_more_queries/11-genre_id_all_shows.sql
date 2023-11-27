@@ -1,3 +1,6 @@
+-- List all shows contained in the database
+-- Display NULL for shows without genres.
+-- order: ascending
 SELECT
     s.`title`,
     g.`genre_id`

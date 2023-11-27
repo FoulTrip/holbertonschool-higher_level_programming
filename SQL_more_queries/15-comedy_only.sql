@@ -1,3 +1,5 @@
+-- List all comedy shows in the database
+-- order: descending
 SELECT
     t.`title`
 FROM

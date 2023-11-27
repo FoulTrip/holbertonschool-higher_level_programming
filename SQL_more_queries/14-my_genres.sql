@@ -1,3 +1,5 @@
+-- List all genres of the show Dexter in the database
+-- order: ascending
 SELECT
     g.`name`
 FROM

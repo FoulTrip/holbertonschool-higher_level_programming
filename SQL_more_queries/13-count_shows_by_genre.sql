@@ -1,3 +1,6 @@
+-- Lists all genres from the database along with the number of
+-- shows linked to each.
+-- ordder: descending
 SELECT
     g.`name` AS `genre`,
     COUNT(*) AS `number_of_shows`

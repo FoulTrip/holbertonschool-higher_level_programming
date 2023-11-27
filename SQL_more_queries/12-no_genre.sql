@@ -1,3 +1,5 @@
+-- Lists all shows in the database without a genre linked.
+-- order: ascending
 SELECT
     s.`title`,
     g.`genre_id`

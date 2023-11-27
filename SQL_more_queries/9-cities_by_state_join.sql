@@ -1,3 +1,5 @@
+-- Lists all cities in the database
+-- order: ascending
 SELECT
     c.`id`,
     c.`name`,

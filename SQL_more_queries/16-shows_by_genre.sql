@@ -1,3 +1,5 @@
+-- Lists all shows and genres of the database
+-- order: ascending
 SELECT
     t.`title`,
     g.`name`
