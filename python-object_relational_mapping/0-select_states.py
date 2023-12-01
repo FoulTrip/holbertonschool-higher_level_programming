@@ -1,11 +1,17 @@
 #!/usr/bin/python3
-# Lists all states from the database
+
 
 import MySQLdb
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1], password=sys.argv[2], db=sys.argv[3])
+    """
+    Access a database
+    """
+    db = MySQLdb.connect(user=argv[1], password=argv[2], db=sys.argv[3])
     c = db.cursor()
     c.execute("SELECT * FROM `states`")
-    [print(state) for state in c.fetchall()]
+    rows = c.fetchall()
+
+    for row in rows:
+        print(row)
