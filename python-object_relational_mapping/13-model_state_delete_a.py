@@ -14,7 +14,13 @@ if __name__ == "__main__":
     Delete State objects on the database
     """
 
-    db_uri = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(argv[1], argv[2], argv[3])
+    conn = "mysql+mysqldb"
+    port = "localhost:3306"
+    arg1 = argv[1]
+    arg2 = argv[2]
+    arg3 = argv[3]
+
+    db_uri = f"{conn}://{arg1}:{arg2}@{port}/{arg3}"
     engine = create_engine(db_uri)
     Session = sessionmaker(bind=engine)
 
