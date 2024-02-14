@@ -1,0 +1,1 @@
+Exercices about class and objects in python
