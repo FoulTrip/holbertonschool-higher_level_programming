@@ -1,0 +1,36 @@
+=====================
+Using ``add_integer``
+=====================
+
+This is an example text file in 0-add_integer.py.  First import
+``add_integer`` from the ``0-add_integer.py`` module:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(2, 3)
+5
+
+>>> add_integer(float('nan'), 10)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(1e10000000, 100)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(1)
+99
+
+>>> add_integer(1, "holberton")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(20.3, 10)
+30
+
+>>> add_integer("hola", 0)
+Traceback (most recent call last):
+TypeError: a must be an integer
