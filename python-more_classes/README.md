@@ -1,1 +1,1 @@
-More scripts of classes
+more excersice about class
