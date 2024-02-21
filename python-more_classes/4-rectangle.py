@@ -6,12 +6,9 @@
 class Rectangle:
     """defines a rectangle"""
 
-    number_of_instances = 0
-
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -45,16 +42,39 @@ class Rectangle:
     def perimeter(self):
         if self.width == 0 or self.height == 0:
             return 0
+
         return 2 * (self.width + self.height)
 
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
+
         return "\n".join(["#" * self.width] * self.height)
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
 
-    def __del__(self):
-        print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
+
+my_rectangle = Rectangle(2, 4)
+print(str(my_rectangle))
+print("--")
+print(my_rectangle)
+print("--")
+print(repr(my_rectangle))
+print("--")
+print(hex(id(my_rectangle)))
+print("--")
+
+# create new instance based on representation
+new_rectangle = eval(repr(my_rectangle))
+print(str(new_rectangle))
+print("--")
+print(new_rectangle)
+print("--")
+print(repr(new_rectangle))
+print("--")
+print(hex(id(new_rectangle)))
+print("--")
+
+print(new_rectangle is my_rectangle)
+print(type(new_rectangle) is type(my_rectangle))
