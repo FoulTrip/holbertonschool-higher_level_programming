@@ -1,0 +1,1 @@
+More exercise about queries mysql 
