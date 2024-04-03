@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" Script with python for connect with MySQL """
 import MySQLdb
 import sys
 

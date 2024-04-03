@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-
+""" Script with python for connect with MySQL """
 import MySQLdb
 from sys import argv
+
 
 if __name__ == "__main__":
     """
