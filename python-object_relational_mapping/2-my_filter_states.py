@@ -15,7 +15,7 @@ if __name__ == "__main__":
     user = argv[1]
     password = argv[2]
     database = argv[3]
-    searched = argv[4]
+    state_name_searched = argv[4]
 
     db = MySQLdb.connect(
         host=host, port=port, user=user, password=password, db=database
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     states = cur.fetchall()
     for state in states:
-        if state[1] == searched:
+        if state[1] == state_name_searched:
             print(f"({state[0]}, \'{state[1]}\')")
     cur.close()
     db.close()
