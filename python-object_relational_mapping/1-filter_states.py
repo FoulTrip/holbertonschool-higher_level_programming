@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Script with python for connect with MySQL """
 import MySQLdb
-import sys
+from sys import argv
 
 if __name__ == "__main__":
     """
@@ -11,9 +11,9 @@ if __name__ == "__main__":
 
     host = "localhost"
     port = 3306
-    user = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
+    user = argv[1]
+    password = argv[2]
+    database = argv[3]
     db = MySQLdb.connect(
         host=host, port=port, user=user, password=password, db=database
     )
