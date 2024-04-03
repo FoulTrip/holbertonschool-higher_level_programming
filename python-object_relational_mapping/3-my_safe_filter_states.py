@@ -5,10 +5,9 @@ from sys import argv
 
 if __name__ == "__main__":
     """
-    takes in arguments and displays all values
-    in the states table of hbtn_0e_0_usa where
-    name matches the argument. that is safe
-    from MySQL injections!
+    takes in an argument and displays all values
+    in the states table of hbtn_0e_0_usa where name
+    matches the argument.
     """
 
     host = "localhost"
