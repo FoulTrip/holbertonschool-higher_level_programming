@@ -16,20 +16,24 @@ if __name__ == "__main__":
     database = argv[3]
 
     db = MySQLdb.connect(
-        host=host, port=port, user=user, password=password, db=database
+        host=host,
+        port=port,
+        user=user,
+        password=password,
+        db=database
     )
     cur = db.cursor()
     cur.execute(
         """
-        SELECT 
+        SELECT
             cities.id, cities.name, states.name
-        FROM 
+        FROM
             cities
-        JOIN 
-            states 
-        ON 
+        JOIN
+            states
+        ON
             cities.state_id = states.id
-        ORDER BY 
+        ORDER BY
             cities.id ASC
     """
     )
