@@ -26,7 +26,7 @@ if __name__ == "__main__":
     cur.execute(
         """
         SELECT
-            cities.id, cities.name, states.name
+            cities.id, cities.name
         FROM
             cities
         JOIN
@@ -41,7 +41,7 @@ if __name__ == "__main__":
         {"state_name": argv[4]},
     )
     cities = cur.fetchall()
-    for city in cities:
-        print(city)
+
+    print(", ".join([cities[1] for city in cities]))
     cur.close()
     db.close()
