@@ -18,9 +18,11 @@ if __name__ == "__main__":
         host=host, port=port, user=user, password=password, db=database
     )
     cur = db.cursor()
-    cur.execute("SELECT cities.id, cities.name, states.name \
+    cur.execute(
+        "SELECT cities.id, cities.name, states.name \
         FROM cities JOIN states ON cities.state_id = state.id\
-        ORDER BY cities.id ASC")
+        ORDER BY cities.id ASC"
+    )
     cities = cur.fetchall()
     print(cities)
     for city in cities:
