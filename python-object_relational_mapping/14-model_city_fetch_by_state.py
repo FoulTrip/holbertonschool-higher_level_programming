@@ -18,5 +18,8 @@ if __name__ == "__main__":
 
     instance = session.query(City, State).join(State)
 
-    for __city__, __state__ in instance.all():
-        print("{}: ({:d}) {}".format(__state__.name, __city__.id, __city__.name))
+    for _city, _state in instance.all():
+        print("{}: ({:d}) {}".format(
+            _state.name, 
+            _city.id, 
+            _city.name))
