@@ -20,6 +20,6 @@ if __name__ == "__main__":
 
     for _city, _state in instance.all():
         print("{}: ({:d}) {}".format(
-            _state.name, 
-            _city.id, 
+            _state.name,
+            _city.id,
             _city.name))
